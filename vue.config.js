@@ -1,5 +1,4 @@
-// var path = require('path')
-// module.exports = {
-//   publicPath: 'gta-test',
-//   outputDir: 'dist',
-// }
+module.exports = {
+  publicPath: 'gta-test',
+  outputDir: 'dist',
+}

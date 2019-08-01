@@ -2,8 +2,9 @@
   <div id="weapon-ammunition">
     <div class="ammunition-clip">
       <div
-        :class="inArms.ammunitionType"
-        class="ammunition-ammo-type"></div>
+        class="ammunition-ammo-type">
+          <i class="fi flaticon-bullet-2"></i>
+        </div>
       <div class="ammunition-clip-total">
         <div class="ammunition-clip-size">{{inArms.ammoInClip}}</div>
         <div class="ammunition-ammo-left">{{inArms.ammoLeft}}</div>
@@ -51,12 +52,14 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      align-items: center;
       background: #ffbd02;
-      width: 6vh;
-      height: 3vh;
+      width: 7vh;
+      height: 4vh;
       margin-left: -1vh;
       color: #000;
-      font-size: 1vh;
+      font-size: 1.3vh;
+      line-height: 1.5vh;
       &-total{
         display: flex;
         flex-direction: column;
@@ -66,19 +69,21 @@
         align-items: center;
       }
       .ammunition-ammo-type{
-        width: 3vh;
-        background: {
-          repeat: no-repeat;
-          position: center;
-        }
-        &.bullets{
-          background-image: url('~/images/ammunition-type-bullets.png');
+        width: 4vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        i{
+          font-size: 3vh;
         }
       }
     }
   }
   .weapon-in-arms{
     margin-left: .6vh;
+    height: 6vh;
+    padding-top: 2vh;
     .weapon-image{
       height: 5vh;
       width: 7vh;

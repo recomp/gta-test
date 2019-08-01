@@ -49,7 +49,7 @@
 <style lang="scss">
   #character-stuff-board{
     max-width: 30vh;
-    height: 5vh;
+    height: 6vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -67,6 +67,7 @@
         justify-content: center;
         align-items: center;
         padding: 0 .4vh;
+        padding-top: .6vh;
         color: #fff;
         font-weight: bold;
         font-size: 1.8vh;
