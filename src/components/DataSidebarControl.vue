@@ -56,12 +56,12 @@
     </div> -->
     <div class="input-field">
       <input
-        id="userArmed"
+        id="userArmedOpen"
         type="checkbox"
-        v-model="userArmed" />
-      <label for="userArmed">Вооружен</label>
+        v-model="userArmedOpen" />
+      <label for="userArmedOpen">Вооружен {{userArmedOpen}}</label>
     </div>
-    <template v-if="userArmed">
+    <template v-if="userArmedOpen">
       <div class="input-field">
         <label>Выберите тип оружия:</label>
         <select v-model="userArmed">
@@ -72,7 +72,7 @@
             :key="key"> {{ weapon.name }}</option>
         </select>
       </div>
-      <div class="input-field" v-if="userArmed.ammoLeft">
+      <div class="input-field" v-if="userArmed && userArmed.ammoLeft">
         <button
         @click='$store.dispatch("armory/MAKE_SHOT")'>
           Пыщь Пыщь ) {{userArmed.ammoInClip}}/{{userArmed.ammoLeft}}
@@ -88,7 +88,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "DataSidebarControl",
   data: () => ({
-
+    userArmedOpen: false
   }),
   computed: {
     ...mapGetters(

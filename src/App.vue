@@ -45,6 +45,7 @@
 </script>
 <style lang="scss">
   @import url("https://cdn.jsdelivr.net/npm/dejavu-sans@1.0.0/css/dejavu-sans.min.css");
+
   body{
     width: 95%;
     padding: 0;
@@ -63,7 +64,7 @@
       resize: both;
       background: {
         repeat: no-repeat;
-        image: url('/images/main-bg-demo.jpg');
+        image: url('~/images/main-bg.jpg');
         size: cover;
         position: center;
       }
@@ -73,7 +74,7 @@
       height: 89vh;
       min-height: 40vh;
       max-height: 89vh;
-      min-width: 18vw;
+      min-width: 35vh;
       flex-direction: column;
       justify-content: flex-end;
     }

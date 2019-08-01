@@ -1,0 +1,56 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 01/08/2019 12:30
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-high-beam:before { content: "\f100"; }
+.flaticon-fuel:before { content: "\f101"; }
+.flaticon-fog-light:before { content: "\f102"; }
+.flaticon-car-collision:before { content: "\f103"; }
+.flaticon-stone-on-the-road:before { content: "\f104"; }
+.flaticon-vehicle-repair:before { content: "\f105"; }
+.flaticon-side-crash:before { content: "\f106"; }
+.flaticon-puncture-in-a-wheel:before { content: "\f107"; }
+.flaticon-overturned-vehicle:before { content: "\f108"; }
+.flaticon-engine-problems:before { content: "\f109"; }
+.flaticon-burning-car:before { content: "\f10a"; }
+.flaticon-hail-on-the-car:before { content: "\f10b"; }
+.flaticon-lock:before { content: "\f10c"; }
+.flaticon-unlock:before { content: "\f10d"; }
+.flaticon-bullet:before { content: "\f10e"; }
+.flaticon-bullet-1:before { content: "\f10f"; }
+.flaticon-ammo:before { content: "\f110"; }
+.flaticon-bullet-2:before { content: "\f111"; }
+.flaticon-gun:before { content: "\f112"; }
+.flaticon-gun-1:before { content: "\f113"; }
+.flaticon-axe:before { content: "\f114"; }
+.flaticon-purse:before { content: "\f115"; }
+.flaticon-clock-circular-outline:before { content: "\f116"; }
+.flaticon-car-compact:before { content: "\f117"; }

@@ -11,6 +11,7 @@
     </div>
     <div class="weapon-in-arms">
       <div
+        :style="weaponSpriteImageStyle"
         class="weapon-image"></div>
     </div>
   </div>
@@ -28,6 +29,9 @@
           inArms: 'armory/inArms'
         }
       ),
+      weaponSpriteImageStyle(){
+        return {'background-position': this.inArms.spriteCoordinates}
+      },
       ammoInClip(){
         return Math.round(this.inArms.ammoLeft/this.inArms.clipSize)
       }
@@ -42,43 +46,48 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    position: relative;
+    align-items: center;
     .ammunition-clip{
-      position: relative;
-      left: -1.3vw;
-      bottom: .7vh;
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      background: #ffbd026e;
-      width: 2.8vw;
-      height: 2.5vh;
+      background: #ffbd02;
+      width: 6vh;
+      height: 3vh;
+      margin-left: -1vh;
       color: #000;
-      font-size: 10px;
+      font-size: 1vh;
       &-total{
         display: flex;
         flex-direction: column;
-        width: 1vw;
+        width: 3vh;
         font-weight: bold;
         justify-content: space-between;
+        align-items: center;
       }
       .ammunition-ammo-type{
-        width: 1vw;
+        width: 3vh;
         background: {
           repeat: no-repeat;
           position: center;
         }
         &.bullets{
-          background-image: url('/images/ammunition-type-bullets.png');
+          background-image: url('~/images/ammunition-type-bullets.png');
         }
       }
     }
   }
-  .weapon-image{
-    height: 2.5vh;
-    background: {
-      color: #fff;
-
+  .weapon-in-arms{
+    margin-left: .6vh;
+    .weapon-image{
+      height: 5vh;
+      width: 7vh;
+      background: {
+        image: url('~/images/weapons-sprite.png');
+        repeat: no-repeat;
+        size: 8vh;
+      }
+      filter: brightness(0) invert(1);
     }
   }
 </style>

@@ -57,12 +57,12 @@ export default {
       align-items: flex-end;
       justify-content: flex-end;
       flex-grow: 0;
-      margin-right: 1.5vw;
+      margin-right: 2vh;
       margin-bottom: 2vh;
     }
   }
   .board{
     background: rgba(0, 0, 0, .7);
-    margin-top: 1.5vw;
+    margin-top: 2vh;
   }
 </style>

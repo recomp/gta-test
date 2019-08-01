@@ -6,12 +6,13 @@
       <div
         v-for="(point, index) in fuelLevel"
         :key="index"
-        :style="{maxWidth: `${maxPointsSize}vw`}"
+        :style="{flexGrow: maxPointsSize ? .1 : 0}"
         class="scale-point"></div>
     </div>
     <div
-      :style="{maxWidth: `${maxPointsSize ? maxPointsSize*2 : 1}vw`}"
+      :style="{maxWidth: `${maxPointsSize ? maxPointsSize*2 : 1}vh`}"
       id="fuel-main-indicator">
+      <i class="fi flaticon-fuel"></i>
     </div>
   </div>
 </template>
@@ -59,24 +60,23 @@
       align-items: flex-end;
       flex-grow: 1;
       .scale-point{
-        min-width: .7vw;
+        min-width: 1.4vh;
         height: .5vh;
-        margin-right: .2vw;
+        margin-right: .3vh;
+        flex-grow: 1;
         &:last-child{
           margin-right: 0;
         }
       }
     }
     #fuel-main-indicator{
-      width: 1.7vw;
-      height: 4.5vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 2vh;
+      height: 5vh;
       position: relative;
-      // flex-grow: 1;
-      background: {
-        repeat: no-repeat;
-        position: center;
-        image: url('/images/fuel-main-icon.png');
-      }
     }
   }
 </style>
