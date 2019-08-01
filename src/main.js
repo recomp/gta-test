@@ -4,6 +4,7 @@ import store from './store/'
 import router from './router'
 import './assets/font/_flaticon.scss'
 
+Vue.use(require('vue-moment'));
 Vue.config.productionTip = false
 
 new Vue({

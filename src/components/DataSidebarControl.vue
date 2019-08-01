@@ -15,7 +15,7 @@
         id="carLockedDoors"
         type="checkbox"
         v-model="carLockedDoors" />
-      <label for="carLockedDoors">Двери</label>
+      <label for="carLockedDoors">Открыть двери</label>
     </div>
     <div class="input-field">
       <input id="carHeadlight" type="checkbox" v-model="carHeadlight" />
@@ -28,8 +28,7 @@
         type="range"
         min="0"
         max="100"
-        v-model.number="carDamage"
-      />
+        v-model.number="carDamage"/>
     </div>
     <div class="input-field range">
       <label for="carFuel">Топливо {{fuelLevel}}</label>
@@ -50,10 +49,14 @@
         v-model.number="carSpeed" />
     </div>
     <h4>Состояние пользователя</h4>
-<!--     <div class="input-field">
+    <div class="input-field">
       <label for="userMoney">Деньги</label>
-      <input id="userMoney" type="number" min="0" v-model.number="userMoney" />
-    </div> -->
+      <input
+        id="userMoney"
+        type="number"
+        min="0"
+        v-model.number="userMoney" />
+    </div>
     <div class="input-field">
       <input
         id="userArmedOpen"
@@ -88,7 +91,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "DataSidebarControl",
   data: () => ({
-    userArmedOpen: false
+    userArmedOpen: false,
   }),
   computed: {
     ...mapGetters(
@@ -102,6 +105,7 @@ export default {
         speed: 'transport/speed',
         inArms: 'armory/inArms',
         arsenal: 'armory/arsenal',
+        cash: 'character/cash',
       }
     ),
     stateControlEnabled: {
@@ -152,38 +156,14 @@ export default {
         this.$store.commit("transport/SET_SPEED", value);
       }
     },
-    // userMoney: {
-    //   get() {
-    //     return this.user.money;
-    //   },
-    //   set(value) {
-    //     this.$store.commit("state/setMoney", value);
-    //   }
-    // },
-    // weaponClipSize: {
-    //   get() {
-    //     return this.user.weapon.clipSize;
-    //   },
-    //   set(value) {
-    //     this.$store.commit("state/setClipSize", value);
-    //   }
-    // },
-    // weaponAmmo: {
-    //   get() {
-    //     return this.user.weapon.ammo;
-    //   },
-    //   set(value) {
-    //     this.$store.commit("state/setAmmo", value);
-    //   }
-    // },
-    // weaponType: {
-    //   get() {
-    //     return this.user.weapon.type;
-    //   },
-    //   set(value) {
-    //     this.$store.commit("state/setWeaponType", value);
-    //   }
-    // },
+    userMoney: {
+      get() {
+        return this.cash.amount;
+      },
+      set(value) {
+        this.$store.commit("character/SET_CASH", value);
+      }
+    },
     userArmed: {
       get() {
         return this.inArms;

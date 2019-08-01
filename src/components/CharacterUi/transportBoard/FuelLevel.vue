@@ -10,7 +10,6 @@
         class="scale-point"></div>
     </div>
     <div
-      :style="{maxWidth: `${maxPointsSize ? maxPointsSize*2 : 1}vh`}"
       id="fuel-main-indicator">
       <i class="fi flaticon-fuel"></i>
     </div>
@@ -29,7 +28,7 @@
         fuelLevel: 'transport/fuelLevel'
       }),
       fuelLevelClass(){
-        return 'full'
+        return this.fuelLevel > 2 ? 'full' : 'fuel-out'
       },
       maxPointsSize(){
         return this.fuelLevel < 4 ? '1' : '1.5'
@@ -53,6 +52,11 @@
           background-color: yellow;
       }
     }
+    &.fuel-out{
+      #fuel-main-indicator, .scale-point{
+          background-color: red;
+      }
+    }
     #fuel-scale-points{
       display: flex;
       flex-direction: row;
@@ -61,8 +65,8 @@
       flex-grow: 1;
       .scale-point{
         min-width: 1.4vh;
-        height: .5vh;
-        margin-right: .3vh;
+        height: 1vh;
+        margin-right: .6vh;
         flex-grow: 1;
         &:last-child{
           margin-right: 0;
@@ -75,8 +79,13 @@
       justify-content: center;
       align-items: center;
       width: 2vh;
-      height: 5vh;
+      height: 6vh;
+      max-width: 3vh;
       position: relative;
+      flex-grow: 1;
+      i{
+        font-size: 2vh;
+      }
     }
   }
 </style>

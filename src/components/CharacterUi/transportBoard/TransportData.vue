@@ -2,6 +2,7 @@
   <div id="transport-data">
     <div
       id="transport-lock"
+      :class="doorsOpen ? 'unlocked' : 'locked'"
       class="transport-data-controls">
       <i
         :class="`flaticon-${doorsOpen ? 'unlock' : 'lock'}`"
@@ -10,7 +11,9 @@
     <div
       id="transport-damage-status"
       class="transport-data-controls">
-      <i class="fi flaticon-car-collision"></i>
+      <i
+        :class="carDamageClass"
+        class="fi"></i>
     </div>
     <div
       id="transport-light"
@@ -31,7 +34,7 @@
   export default {
     name: 'transportData',
     data: () => ({
-      damageIconsClass: {
+      damageIconsClasses: {
         "80": "flaticon-car-compact",
         "60": "flaticon-puncture-in-a-wheel",
         "45": "flaticon-car-collision",
@@ -49,10 +52,11 @@
         speed: 'transport/speed',
       }),
       carDamageClass() {
-        return 100 - this.damageScore
+
+        return "flaticon-car-collision"
       },
       carHeadlightClass() {
-        return this.headLightOn ? 'flaticon-high-beam' : 'flaticon-fog-light';
+        return this.headLightOn ? 'headlights on flaticon-high-beam' : 'headlights off flaticon-fog-light';
       },
       transportSpeed(){
         return {data: this.speed, unit: 'км/ч'}
@@ -69,12 +73,11 @@
     top: 0;
     z-index: 10;
     display: block;
-    width: 93%;
-    height: 4vh;
+    width: 26vh;
+    height: 5vh;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    // background: #000;
     overflow: hidden;
 
     .transport-data-controls{
@@ -95,6 +98,12 @@
       // background: rgba(255, 255, 255, .5);
     }
     #transport-lock{
+      &.locked i{
+        color: red;
+      }
+      &.unlocked i{
+        color: green;
+      }
       i{
         color: #fff;
         font-size: 3.1vh;
@@ -102,7 +111,15 @@
     }
     #transport-light{
       i{
-        color: #fff;
+        &.headlights{
+          &.on{
+             color: yellow;
+          }
+          &.off{
+             color: red;
+          }
+        }
+
         font-size: 3.4vh;
       }
     }

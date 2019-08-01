@@ -18,11 +18,11 @@
 <style lang="scss">
   #transport-scoreboard{
     flex-grow: 1;
-    width: 30vh;
-    height: 5vh;
+    min-width: 30vh;
+    height: 6vh;
     display: flex;
     flex-direction: row;
     position: relative;
-    align-items: flex-start;
+    align-items: flex-end;
   }
 </style>
