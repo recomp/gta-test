@@ -1,6 +1,5 @@
 <template>
   <div id="transport-data">
-    {{carDamageClass}}
     <div
       id="transport-lock"
       class="transport-data-controls">

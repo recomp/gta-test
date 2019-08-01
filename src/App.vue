@@ -64,7 +64,7 @@
       resize: both;
       background: {
         repeat: no-repeat;
-        image: url('~/images/main-bg.jpg');
+        image: url('/images/main-bg.jpg');
         size: cover;
         position: center;
       }
