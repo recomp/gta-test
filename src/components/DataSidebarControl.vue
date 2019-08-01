@@ -72,7 +72,7 @@
             :key="key"> {{ weapon.name }}</option>
         </select>
       </div>
-      <div class="input-field" v-if="userArmed && userArmed.ammoLeft">
+      <div class="input-field" v-if="userArmed && (userArmed.ammoLeft || userArmed.ammoInClip)">
         <button
         @click='$store.dispatch("armory/MAKE_SHOT")'>
           Пыщь Пыщь ) {{userArmed.ammoInClip}}/{{userArmed.ammoLeft}}
