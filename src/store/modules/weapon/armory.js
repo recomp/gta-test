@@ -45,7 +45,7 @@ const actions = {
     weapon.ammoLeft ? commit('SET_AMMO_LEFT') : false
   },
   MAKE_SHOT: ({ commit, state }) => {
-    if (state.inArms.ammoLeft) {
+    if (state.inArms.ammoLeft || state.inArms.ammoInClip) {
       if (state.inArms.ammoInClip) {
         commit('SET_AMMO_CLIP_LEFT')
       }else{
