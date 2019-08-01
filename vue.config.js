@@ -1,5 +1,5 @@
 var path = require('path')
 module.exports = {
-  baseUrl: '/gta-test/',
+  publicPath: '/gta-test/',
   outputDir: 'dist',
 }
