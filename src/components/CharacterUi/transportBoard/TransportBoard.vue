@@ -20,5 +20,6 @@
     flex-grow: 1;
     width: 13.9vw;
     height: 4.5vh;
+    position: relative;
   }
 </style>

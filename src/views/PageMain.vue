@@ -2,11 +2,8 @@
   <div id="main" :style="{width: `${windowParams.width}px`, height: `${windowParams.height}px`}">
     <div class="main-wrapper">
       <transport-board
-        :title="`${windowParams.height*(0.70*controlStyles)}px`"
         v-if="controlsEnabled"/>
       <character-stuff
-        :title="`${windowParams.height*0.85*controlStyles}px`"
-        :style="{top: `${windowParams.height*0.85*controlStyles}px`, right: '1.4vw'}"
         v-if="controlsEnabled"/>
     </div>
   </div>

@@ -3,11 +3,15 @@
     <div class="ammunition-clip">
       <div
         :class="inArms.ammunitionType"
-        class="ammunition-ammo-type" />
+        class="ammunition-ammo-type"></div>
       <div class="ammunition-clip-total">
         <div class="ammunition-clip-size">{{inArms.ammoInClip}}</div>
         <div class="ammunition-ammo-left">{{inArms.ammoLeft}}</div>
       </div>
+    </div>
+    <div class="weapon-in-arms">
+      <div
+        class="weapon-image"></div>
     </div>
   </div>
 </template>
@@ -37,8 +41,10 @@
   #weapon-ammunition{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
+    position: relative;
     .ammunition-clip{
-      position: absolute;
+      position: relative;
       left: -1.3vw;
       bottom: .7vh;
       display: flex;
@@ -66,6 +72,13 @@
           background-image: url('/images/ammunition-type-bullets.png');
         }
       }
+    }
+  }
+  .weapon-image{
+    height: 2.5vh;
+    background: {
+      color: #fff;
+
     }
   }
 </style>

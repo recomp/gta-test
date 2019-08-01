@@ -85,6 +85,8 @@
     #transport-speed{
       flex-grow: 1;
       max-width: 4.3vw;
+      text-align: right;
+      padding-right: 15px;
       line-height: 4vh;
       font-size: 3vh;
       color: #fff;
