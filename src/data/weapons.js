@@ -13,7 +13,7 @@ export default [
     clipSize: 40,
     ammoLeft: 230,
     ammoInClip: 40,
-    spriteCoordinates: "center -90px"
+    spriteCoordinates: "center -65px"
   },
   {
     name: 'AP Pistol',
@@ -21,7 +21,7 @@ export default [
     clipSize: 20,
     ammoLeft: 125,
     ammoInClip: 20,
-    spriteCoordinates: "center -168px"
+    spriteCoordinates: "center -118px"
   },
   {
     name: 'Assault Rifle',
@@ -29,7 +29,7 @@ export default [
     clipSize: 30,
     ammoLeft: 200,
     ammoInClip: 30,
-    spriteCoordinates: "center -245px"
+    spriteCoordinates: "center -172px"
   },
   {
     name: 'Assault Rifle MK II',
@@ -37,7 +37,7 @@ export default [
     clipSize: 40,
     ammoLeft: 38,
     ammoInClip: 10,
-    spriteCoordinates: "center -320px"
+    spriteCoordinates: "center -223px"
   },
   {
     name: 'Assault Shotgun',
@@ -45,7 +45,7 @@ export default [
     clipSize: 10,
     ammoLeft: 5,
     ammoInClip: 5,
-    spriteCoordinates: "center -400px"
+    spriteCoordinates: "center -277px"
   },
   {
     name: 'Assault SMG',
@@ -53,48 +53,56 @@ export default [
     clipSize: 30,
     ammoLeft: 18,
     ammoInClip: 18,
-    spriteCoordinates: "center -482px"
+    spriteCoordinates: "center -333px"
   },
   {
     name: 'red cup',
+    ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -560px"
+    spriteCoordinates: "center -387px"
   },
   {
     name: 'baseball ball',
+    ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -13px"
+    spriteCoordinates: "center -438px"
+  },
+  {
+    name: 'baseball bat',
+    ammunitionType: 'object',
+    clipSize: 1,
+    spriteCoordinates: "center -493px"
   },
   {
     name: 'Battle Axe',
+    ammunitionType: 'hand_weapon',
     clipSize: 1,
-    spriteCoordinates: "center -636px"
-  },
-  {
-    name: 'baseball bita',
-    clipSize: 1,
-    spriteCoordinates: "center -716px"
+    spriteCoordinates: "center -546px"
   },
   {
     name: 'Box closed',
+    ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -716px"
+    spriteCoordinates: "center -597px"
   },
   {
     name: 'Box open',
+    ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -13px"
+    spriteCoordinates: "center -652px"
   },
   {
     name: 'plastid',
+    ammunitionType: 'explosives',
     clipSize: 1,
     ammoLeft: 5,
     ammoInClip: 1,
-    spriteCoordinates: "center -13px"
+    spriteCoordinates: "center -705px"
   },
   {
     name: 'bottle',
+    ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -13px"
+    spriteCoordinates: "center -762px"
   }
 ]
