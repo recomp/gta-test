@@ -97,7 +97,7 @@
       height: 5vh;
       width: 7vh;
       background: {
-        image: url('~/images/weapons-sprite.png');
+        image: url('~@/assets/images/weapons-sprite.png');
         repeat: no-repeat;
         size: 8vh;
       }
