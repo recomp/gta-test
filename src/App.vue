@@ -59,6 +59,15 @@
     margin: 0 auto;
     font-family:'DejaVu Sans'
   }
+  .bg-red{
+    background: red;
+  }
+  .color-green{
+    color: green;
+  }
+  .color-red{
+    color: red;
+  }
   #app {
     display: flex;
     flex-direction: row;

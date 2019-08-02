@@ -184,6 +184,7 @@ export default {
     height: calc(100vh - 60px);
     background-color: white;
     padding: 15px;
+    overflow: auto;
     .title {
       text-align: center;
     }

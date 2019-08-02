@@ -34,7 +34,7 @@
   export default {
     name: 'transportData',
     data: () => ({
-      carDamageClass: "flaticon-car-compact green",
+      carDamageClass: "flaticon-car-compact color-green",
       damageIconsClasses: [
         {
           level: 80,
@@ -62,7 +62,7 @@
       carDamage(score){
         let icon = this.damageIconsClasses.find( x => (x.level === score))
         if (icon) {
-          this.carDamageClass = `${icon.icon} ${score > 60 ? 'red' : 'green'}`
+          this.carDamageClass = `${icon.icon} ${score > 60 ? 'color-red' : 'color-green'}`
         }
       }
     },
@@ -79,7 +79,7 @@
         return 100 - this.damageScore;
       },
       carHeadlightClass() {
-        return this.headLightOn ? 'headlights on flaticon-high-beam' : 'headlights off flaticon-fog-light';
+        return this.headLightOn ? 'headlights color-green flaticon-high-beam' : 'headlights color-red flaticon-fog-light';
       },
       transportSpeed(){
         return {data: this.speed, unit: 'км/ч'}
@@ -111,7 +111,6 @@
       justify-content: center;
       align-items: center;
       i{
-        color: #fff;
         font-size: 5vh;
         padding-top: 1vh;
       }
@@ -127,23 +126,11 @@
         color: green;
       }
       i{
-        color: #fff;
         font-size: 3.1vh;
       }
     }
-    #transport-light{
-      i{
-        &.headlights{
-          &.on{
-             color: yellow;
-          }
-          &.off{
-             color: red;
-          }
-        }
-
-        font-size: 3.4vh;
-      }
+    #transport-light i{
+      font-size: 3.4vh;
     }
     #transport-damage-status{
       display: flex;
@@ -157,13 +144,6 @@
         &.flaticon-car-compact{
           font-size: 3vh;
         }
-        &.green{
-          color: green;
-        }
-        &.red{
-          color: red;
-        }
-
       }
 
     }
