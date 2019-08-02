@@ -96,7 +96,7 @@
     top: 0;
     z-index: 10;
     display: block;
-    width: 26vh;
+    width: 90%;
     height: 5vh;
     display: flex;
     flex-direction: row;
@@ -110,10 +110,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-right: .7vw;
       i{
         color: #fff;
         font-size: 5vh;
+        padding-top: 1vh;
       }
       &:last-child{
         margin-right: 0;
@@ -150,21 +150,29 @@
       flex-direction: column;
       justify-content: center;
       i{
+        font-size: 3.2vh;
+        &.flaticon-car-collision{
+          font-size: 4.2vh;
+        }
+        &.flaticon-car-compact{
+          font-size: 3vh;
+        }
         &.green{
           color: green;
         }
         &.red{
           color: red;
         }
-        font-size: 4.2vh;
+
       }
 
     }
     #transport-speed{
       flex-grow: 1;
-      max-width: 4.3vw;
+      max-width: 5vh;
       text-align: right;
       padding-right: 15px;
+      padding-top: .5vh;
       line-height: 4vh;
       font-size: 3vh;
       color: #fff;

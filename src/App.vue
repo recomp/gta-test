@@ -81,7 +81,7 @@
       height: 89vh;
       min-height: 40vh;
       max-height: 89vh;
-      min-width: 35vh;
+      min-width: 38vh;
       flex-direction: column;
       justify-content: flex-end;
     }

@@ -1,13 +1,13 @@
 import arsenal from '@/data/weapons'
 const state = {
   arsenal: arsenal,
-  inArms: null,
+  inArms: false,
   ammoLeft: 10
 }
 
 const getters = {
   inArms: state => {
-    return state.inArms;
+    return state.inArms ? state.inArms : false;
   },
   arsenal: state => {
     return state.arsenal;

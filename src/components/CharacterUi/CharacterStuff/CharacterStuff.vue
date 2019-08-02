@@ -60,7 +60,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: flex-end;
-      margin-right: .3vh;
+      margin: 0 .5vh;
       .stuff-controls{
         display: flex;
         flex-direction: row;

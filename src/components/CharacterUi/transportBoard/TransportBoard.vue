@@ -18,7 +18,7 @@
 <style lang="scss">
   #transport-scoreboard{
     flex-grow: 1;
-    min-width: 30vh;
+    min-width: 28vh;
     height: 6vh;
     display: flex;
     flex-direction: row;

@@ -68,7 +68,7 @@
       <div class="input-field">
         <label>Выберите тип оружия:</label>
         <select v-model="userArmed">
-          <option :value="null">Без оружия</option>
+          <option :value="false">Без оружия</option>
           <option
             v-for="(weapon, key) in arsenal"
             :value="weapon"
