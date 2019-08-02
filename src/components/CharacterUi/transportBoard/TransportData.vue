@@ -34,14 +34,38 @@
   export default {
     name: 'transportData',
     data: () => ({
-      damageIconsClasses: {
-        "80": "flaticon-car-compact",
-        "60": "flaticon-puncture-in-a-wheel",
-        "45": "flaticon-car-collision",
-        "30": "flaticon-vehicle-repair",
-        "10": "flaticon-burning-car",
-      }
+      carDamageClass: "flaticon-car-compact green",
+      damageIconsClasses: [
+        {
+          level: 80,
+          icon: "flaticon-burning-car"
+        },
+        {
+          level: 60,
+          icon: "flaticon-vehicle-repair"
+        },
+        {
+          level: 45,
+          icon: "flaticon-car-collision"
+        },
+        {
+          level: 30,
+          icon: "flaticon-puncture-in-a-wheel"
+        },
+        {
+          level: 10,
+          icon: "flaticon-car-compact"
+        }
+      ]
     }),
+    watch:{
+      carDamage(score){
+        let icon = this.damageIconsClasses.find( x => (x.level === score))
+        if (icon) {
+          this.carDamageClass = `${icon.icon} ${score > 60 ? 'red' : 'green'}`
+        }
+      }
+    },
     computed: {
       ...mapGetters({
         headLightOn: "transport/headLightOn",
@@ -51,9 +75,8 @@
         fuelLevel: 'transport/fuelLevel',
         speed: 'transport/speed',
       }),
-      carDamageClass() {
-
-        return "flaticon-car-collision"
+      carDamage(){
+        return 100 - this.damageScore;
       },
       carHeadlightClass() {
         return this.headLightOn ? 'headlights on flaticon-high-beam' : 'headlights off flaticon-fog-light';
@@ -95,7 +118,6 @@
       &:last-child{
         margin-right: 0;
       }
-      // background: rgba(255, 255, 255, .5);
     }
     #transport-lock{
       &.locked i{
@@ -128,7 +150,12 @@
       flex-direction: column;
       justify-content: center;
       i{
-        color: #fff;
+        &.green{
+          color: green;
+        }
+        &.red{
+          color: red;
+        }
         font-size: 4.2vh;
       }
 
