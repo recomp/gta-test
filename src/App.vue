@@ -27,6 +27,13 @@
     directives: {
       resize,
     },
+    mounted(){
+      this.$nextTick(function() {
+        window.addEventListener('resize', this.handleResize);
+        //Init
+        this.handleResize()
+      })
+    },
     computed: {
       resizeWindowParams(){
         return this.$store.state.window
@@ -77,6 +84,18 @@
       min-width: 35vh;
       flex-direction: column;
       justify-content: flex-end;
+    }
+  }
+
+  .blink{
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes blink {
+    50% {
+      opacity: .5;
     }
   }
 </style>

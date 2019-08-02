@@ -1,6 +1,9 @@
 <template>
   <div id="weapon-ammunition">
-    <div class="ammunition-clip">
+    <div
+      v-if="inArms.ammunitionType === 'bullets'"
+      :class="{'red blink' : ammoClipOverClass}"
+      class="ammunition-clip">
       <div
         class="ammunition-ammo-type">
           <i class="fi flaticon-bullet-2"></i>
@@ -30,6 +33,9 @@
           inArms: 'armory/inArms'
         }
       ),
+      ammoClipOverClass(){
+        return this.inArms.ammoInClip <= 4
+      },
       weaponSpriteImageStyle(){
         return {'background-position': this.inArms.spriteCoordinates}
       },
@@ -60,6 +66,9 @@
       color: #000;
       font-size: 1.3vh;
       line-height: 1.5vh;
+      &.red{
+        background: red;
+      }
       &-total{
         display: flex;
         flex-direction: column;
@@ -81,7 +90,7 @@
     }
   }
   .weapon-in-arms{
-    margin-left: .6vh;
+    margin: 0 1vh;
     height: 6vh;
     padding-top: 2vh;
     .weapon-image{

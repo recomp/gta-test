@@ -7,6 +7,7 @@
         v-for="(point, index) in fuelLevel"
         :key="index"
         :style="{flexGrow: maxPointsSize ? .1 : 0}"
+        :class="{'blink' : fuelLevel === 1}"
         class="scale-point"></div>
     </div>
     <div
@@ -28,7 +29,7 @@
         fuelLevel: 'transport/fuelLevel'
       }),
       fuelLevelClass(){
-        return this.fuelLevel > 2 ? 'full' : 'fuel-out'
+        return this.fuelLevel > 0 ? 'full' : 'fuel-out blink'
       },
       maxPointsSize(){
         return this.fuelLevel < 4 ? '1' : '1.5'
