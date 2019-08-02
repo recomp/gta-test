@@ -5,7 +5,7 @@ export default [
     clipSize: 10,
     ammoLeft: 54,
     ammoInClip: 10,
-    spriteCoordinates: "center -13px"
+    spriteCoordinates: "center -2vh"
   },
   {
     name: 'Advanced Rifle',
@@ -13,7 +13,7 @@ export default [
     clipSize: 40,
     ammoLeft: 230,
     ammoInClip: 40,
-    spriteCoordinates: "center -65px"
+    spriteCoordinates: "center -10vh"
   },
   {
     name: 'AP Pistol',
@@ -21,7 +21,7 @@ export default [
     clipSize: 20,
     ammoLeft: 125,
     ammoInClip: 20,
-    spriteCoordinates: "center -118px"
+    spriteCoordinates: "center -18vh"
   },
   {
     name: 'Assault Rifle',
@@ -29,7 +29,7 @@ export default [
     clipSize: 30,
     ammoLeft: 200,
     ammoInClip: 30,
-    spriteCoordinates: "center -172px"
+    spriteCoordinates: "center -26vh"
   },
   {
     name: 'Assault Rifle MK II',
@@ -37,7 +37,7 @@ export default [
     clipSize: 40,
     ammoLeft: 38,
     ammoInClip: 10,
-    spriteCoordinates: "center -223px"
+    spriteCoordinates: "center -34vh"
   },
   {
     name: 'Assault Shotgun',
@@ -45,7 +45,7 @@ export default [
     clipSize: 10,
     ammoLeft: 5,
     ammoInClip: 5,
-    spriteCoordinates: "center -277px"
+    spriteCoordinates: "center -42vh"
   },
   {
     name: 'Assault SMG',
@@ -53,43 +53,43 @@ export default [
     clipSize: 30,
     ammoLeft: 18,
     ammoInClip: 18,
-    spriteCoordinates: "center -333px"
+    spriteCoordinates: "center -50vh"
   },
   {
     name: 'red cup',
     ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -387px"
+    spriteCoordinates: "center -58vh"
   },
   {
     name: 'baseball ball',
     ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -438px"
+    spriteCoordinates: "center -66vh"
   },
   {
     name: 'baseball bat',
     ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -493px"
+    spriteCoordinates: "center -74vh"
   },
   {
     name: 'Battle Axe',
     ammunitionType: 'hand_weapon',
     clipSize: 1,
-    spriteCoordinates: "center -546px"
+    spriteCoordinates: "center -82vh"
   },
   {
     name: 'Box closed',
     ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -597px"
+    spriteCoordinates: "center -90vh"
   },
   {
     name: 'Box open',
     ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -652px"
+    spriteCoordinates: "center -99vh"
   },
   {
     name: 'plastid',
@@ -97,12 +97,12 @@ export default [
     clipSize: 1,
     ammoLeft: 5,
     ammoInClip: 1,
-    spriteCoordinates: "center -705px"
+    spriteCoordinates: "center -106vh"
   },
   {
     name: 'bottle',
     ammunitionType: 'object',
     clipSize: 1,
-    spriteCoordinates: "center -762px"
+    spriteCoordinates: "center -112vh"
   }
 ]
